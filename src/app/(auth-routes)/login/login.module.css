@@ -1,0 +1,42 @@
+.formBox{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+}
+.textCenter{
+    text-align: center;
+}
+.formSpace{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formColumn{
+    flex-direction: column;
+}
+.formGap16{
+    gap: 16px;
+}
+.marginTop16{
+    margin-top: 16px;
+}
+#buttonColor{
+    color: black;
+    border-color: black;
+    text-transform: none;
+}
+.linkStyle{
+    text-decoration: none;
+    color: #3f3f6e;
+    cursor: pointer;
+}
+.marginLeft4{
+    margin-left: 4px;
+}

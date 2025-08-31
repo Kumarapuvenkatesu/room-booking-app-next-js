@@ -1,0 +1,73 @@
+/* Header Background */
+.header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* modern gradient */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Flex row */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo + Home */
+.logo .homeLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.icon {
+  color: #ffdd57; /* gold accent */
+}
+
+/* Navigation */
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  color: #e0e0e0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navList a:hover {
+  color: #fff;
+}
+
+/* Logout Button */
+.logoutBtn {
+  background: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background: #e63946;
+  transform: scale(1.05);
+}
