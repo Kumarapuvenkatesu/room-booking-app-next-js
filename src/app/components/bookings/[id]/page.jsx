@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 export default function EachBookingPage() {
   const { id } = useParams();
   const [bookingDetails, setBookingDetails] = useState(null);
+  
 
   const { latestDates } = useDatesContext();
   const router=useRouter()

@@ -3,9 +3,22 @@ import React,{useState,useEffect} from "react";
 import Image from "next/image";
 import Style from "./bookings.module.css"
 import Link from "next/link";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 export default function AllRooms(){
     const [rooms,setRooms]=useState([]);
     console.log("fetched data",`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`)
+     const { data: session } = useSession();
+  const router = useRouter();
+
+  const handleDetails = (id) => {
+    if (!session) {
+      alert("Please login to view room details");
+      router.push("/login");
+    } else {
+      router.push(`/components/bookings/${id}`);
+    }
+  };
 
     const fetchedData=async()=>{
         try {
@@ -38,7 +51,7 @@ export default function AllRooms(){
           <p>{room.amets}</p>
           <p>{room.description.slice(0,10)}....</p>
           <p className={Style.price}>Price: ₨ {room.price}</p>
-          <Link href={`components/bookings/${room._id}`} passHref>
+          <Link href={() => handleDetails(room._id)} passHref>
           <button className={Style.detailsBtn}>Details</button>
           </Link>
         </div>
