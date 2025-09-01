@@ -30,7 +30,7 @@ export default function AllRooms(){
   <div className={Style.roomsGrid}>
     {rooms && rooms.map((room) => (
       <div key={room._id} className={Style.card}>
-        <Image src={room.image} alt={room.title} width={400} height={250} className={Style.allImages}/>
+        <Image src={room.image} alt={room.title} width={400} height={250} className={Style.allImages} priority={false}/>
 
         <div className={Style.cardContent}>
           <h2>{room.title}</h2>

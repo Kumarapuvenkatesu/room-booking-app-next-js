@@ -7,5 +7,6 @@ export const DBconnection=async()=>{
         
     } catch (error) {
         console.log("DB connection error",error);
+        throw new Error("MongoDB connection failed")
     }
 }
