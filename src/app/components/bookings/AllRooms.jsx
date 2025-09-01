@@ -5,6 +5,7 @@ import Style from "./bookings.module.css"
 import Link from "next/link";
 export default function AllRooms(){
     const [rooms,setRooms]=useState([]);
+    console.log("fetched data",`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`)
 
     const fetchedData=async()=>{
         try {
